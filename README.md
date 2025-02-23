@@ -1,6 +1,6 @@
 # Ansible-Configuration-Automation
 
-# Ansible Project Documentation
+## Ansible Project Documentation
 
 ## Overview
 This project automates the configuration of web and database servers across different environments using Ansible. It includes playbooks, roles, and inventory files to deploy and manage services like Apache and MySQL.
