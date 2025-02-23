@@ -1,0 +1,4 @@
+- src: geerlingguy.nginx
+  name: webserver
+- src: geerlingguy.mysql
+  name: dbserver

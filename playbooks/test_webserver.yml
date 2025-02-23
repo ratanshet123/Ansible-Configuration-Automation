@@ -1,0 +1,10 @@
+---
+- name: Test webserver role
+  hosts: localhost
+  connection: local
+  become: true
+  roles:
+    - role: webserver
+      vars:
+        apache_package: apache2
+        apache_service: apache2

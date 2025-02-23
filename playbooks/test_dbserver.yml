@@ -1,0 +1,10 @@
+---
+- name: Test dbserver role
+  hosts: localhost
+  connection: local
+  become: true
+  roles:
+    - role: dbserver
+      vars:
+        mysql_package: mysql-server
+        mysql_service: mysql

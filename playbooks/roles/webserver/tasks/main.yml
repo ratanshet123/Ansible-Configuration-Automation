@@ -1,0 +1,11 @@
+---
+- name: Install Apache
+  apt:
+    name: "{{ apache_package }}"
+    state: present
+
+- name: Start Apache service
+  service:
+    name: "{{ apache_service }}"
+    state: started
+    enabled: yes
