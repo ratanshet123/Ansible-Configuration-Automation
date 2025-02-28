@@ -1,16 +1,6 @@
 ---
-- name: Install and Configure Apache
-  hosts: localhost
+- name: Install Apache
+  command: apt-get install -y apache2
 
-  become: true
-
-  tasks:
-    - name: Install Apache
-      apt:
-        name: "{{ apache_package }}"
-        state: present
-    - name: Start Apache Service
-      service:
-        name: "{{ apache_service }}"
-        state: started
-        enabled: yes
+- name: Start Apache Service
+  command: service apache2 start
