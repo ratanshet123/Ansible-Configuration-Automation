@@ -3,21 +3,13 @@
   hosts: localhost
   connection: local
 
-
-  become: true
-
   tasks:
     - name: Apply webserver role
       include_role:
         name: webserver
-      vars:
-        apache_package: apache2
-        apache_service: apache2
       tags: webserver
+
     - name: Apply dbserver role
       include_role:
         name: dbserver
-      vars:
-        mysql_package: mysql-server
-        mysql_service: mysql
       tags: dbserver
