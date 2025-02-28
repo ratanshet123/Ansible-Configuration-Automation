@@ -1,16 +1,6 @@
 ---
-- name: Install and Configure MySQL
-  hosts: localhost
+- name: Install MySQL
+  command: apt-get install -y mysql-server
 
-  become: true
-
-  tasks:
-    - name: Install MySQL Server
-      apt:
-        name: "{{ mysql_package }}"
-        state: present
-    - name: Start MySQL Service
-      service:
-        name: "{{ mysql_service }}"
-        state: started
-        enabled: yes
+- name: Start MySQL Service
+  command: service mysql start
