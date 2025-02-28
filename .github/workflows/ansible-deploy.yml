@@ -1,7 +1,6 @@
 # This workflow automates the deployment of the Ansible playbooks
 name: Ansible Deployment
 
-
 on:
   push:
     branches:
